@@ -1,0 +1,23 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="list-group">
+                <li class="list-group-item" >
+                    <span class="badge pull-left">{{i+1}}</span>&nbsp;&nbsp;
+                    {{todo.title}} 
+                    <br>
+                    <br>
+                    <span style='color:red;' class="pull-right" (click)="onSelcted(i)" >X</span>
+                    <button class="btn btn-warning" (click)="onEdit()">Edit</button><br>
+                    <div *ngIf="a">
+                        <br>
+                        <input type="text"  [(ngModel)]="t">&nbsp;&nbsp;<button class="btn btn-primary" (click)="onSubmit(i)">Submit</button>
+                    </div>
+                    
+                </li>
+            </ul>
+           
+        </div>
+    </div>
+</div>

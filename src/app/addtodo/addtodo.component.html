@@ -1,0 +1,18 @@
+<form [formGroup]="todoForm" (ngSubmit)="addTodo()">
+    <div class="container">
+        <div class="row">
+            <div class="col-smm-5">
+                <div class="fom-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" name="title" formControlName="title"
+                    autocomplete="off">
+                    <span *ngIf="!todoForm.get('title')?.valid && todoForm.get('title')?.touched">
+                        ** Please Enter Todo 
+                    </span>
+                </div>
+            </div>
+            <hr>
+            <button class="btn btn-primary" [disabled]="!todoForm.valid">Add Todo</button>
+        </div>
+    </div>
+    </form>
